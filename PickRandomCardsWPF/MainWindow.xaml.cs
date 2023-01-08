@@ -32,7 +32,7 @@ namespace PickRandomCardsWPF
             if (int.TryParse(inputCardNumber, out int numberOfCards))
             {
                 string[] pickedCards = CardPicker.PickSomeCards(numberOfCards);
-
+                listOfCards.Items.Clear();
                 foreach(string card in pickedCards)
                 {
                     listOfCards.Items.Add(card); 
