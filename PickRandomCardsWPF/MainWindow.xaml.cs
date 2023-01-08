@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PickRandomCards;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,11 +28,10 @@ namespace PickRandomCardsWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int number = 0;
             string inputCardNumber = inputCard.Text;
             if (int.TryParse(inputCardNumber, out int numberOfCards))
             {
-                string[] pickedCards = CardPicked.PickSomeCards(numberOfCards);
+                string[] pickedCards = CardPicker.PickSomeCards(numberOfCards);
 
                 foreach(string card in pickedCards)
                 {
